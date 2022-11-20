@@ -105,6 +105,8 @@ df3_metadata = {
 }
 
 def generate(type, data, metadata, rows, path, filename):
+    if type == "SDV":
+        model = SDV()
     if type == "CTGAN":
         model = CTGAN(table_metadata=metadata)
     if type == "TabularPreset":
